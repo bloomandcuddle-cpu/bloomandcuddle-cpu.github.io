@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom & Cuddle - Newborn Essentials & Gentle Mom Care</title>
-    <meta name="description" content="Your trusted resource for evidence-based baby product reviews and gentle parenting advice for new moms.">
+    <title>Bloom & Cuddle - End Mom Guilt with Expert Tips</title>
+    <meta name="description" content="Pediatrician-approved methods to stop 3AM crying. Get your free cheat sheet for gas, reflux & peaceful nights.">
     <style>
         * {
             margin: 0;
@@ -19,135 +19,205 @@
             line-height: 1.6;
         }
 
+        /* الهيدر المحسن */
         .header {
             background: linear-gradient(135deg, #B8A3D3 0%, #A8E6CF 100%);
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
             color: white;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 300;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            opacity: 0.95;
         }
 
+        /* قسم الهيرو المحسن */
         .hero {
             background-color: #FFFFFF;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h2 {
-            color: #B8A3D3;
-            font-size: 2rem;
+            color: #2C5530;
+            font-size: 2.1rem;
             margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
+        .hero .subheadline {
+            color: #5D4E75;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .hero .pre-cta {
+            color: #B8A3D3;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        /* الزر المحسن */
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #B8A3D3, #A8E6CF);
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
             color: white;
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: transform 0.3s ease;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
         }
 
+        .micro-assurance {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+
+        /* شارة الثقة */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5D4E75;
+            font-size: 0.9rem;
+        }
+
+        /* الأقسام المحسنة */
         .sections {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 50px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 35px 25px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(184, 163, 211, 0.1);
+            box-shadow: 0 5px 20px rgba(184, 163, 211, 0.15);
             border: 2px solid #A8E6CF;
             transition: transform 0.3s ease;
         }
 
         .section-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
 
         .section-card h3 {
             color: #B8A3D3;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 700;
         }
 
         .section-card p {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
+        /* الفوتر */
         .footer {
             background-color: #f8f9fa;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
             border-top: 3px solid #A8E6CF;
         }
 
+        /* متجاوب مع الجوال */
         @media (max-width: 768px) {
-            .header h1 { font-size: 2rem; }
-            .sections { grid-template-columns: 1fr; }
-            .hero h2 { font-size: 1.5rem; }
+            .header h1 { font-size: 1.8rem; }
+            .hero h2 { font-size: 1.7rem; }
+            .hero .subheadline { font-size: 1.1rem; }
+            .sections { grid-template-columns: 1fr; padding: 30px 15px; }
+            .trust-badges { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
+    <!-- الهيدر -->
     <header class="header">
         <h1>🌸 Bloom & Cuddle</h1>
         <p>Newborn Essentials & Gentle Mom Care</p>
     </header>
 
+    <!-- قسم الهيرو المحسن -->
     <section class="hero">
-        <h2>Get Your Free Ultimate Newborn Checklist</h2>
-        <p>Everything you need for your baby's first months - curated by experienced moms</p>
-        <a href="#" class="cta-button">Download Your Free Checklist</a>
+        <h2>Stop the 3AM Crying: Get the Expert Cheat Sheet to End Gas, Reflux & Mom Guilt</h2>
+        
+        <p class="subheadline">Created by real moms, approved by pediatricians — everything you need for calmer nights and guilt-free mornings.</p>
+        
+        <p class="pre-cta">Tired of the mom guilt? Let's fix that together.</p>
+        
+        <a href="#" class="cta-button">Get My Free Cheat Sheet</a>
+        
+        <p class="micro-assurance">💌 We'll send it straight to your inbox — no spam, ever.</p>
+
+        <!-- شارات الثقة -->
+        <div class="trust-badges">
+            <div class="trust-badge">✅ Pediatrician-Approved Methods</div>
+            <div class="trust-badge">💧 Safe, Tested Remedies Moms Trust</div>
+        </div>
     </section>
 
+    <!-- الأقسام المحسنة -->
     <section class="sections">
         <div class="section-card">
             <h3>🛍️ Best Products</h3>
-            <p>Curated baby gear reviews and essential product guides</p>
+            <p>Curated baby gear reviews and essential product guides based on real mom testing and pediatrician recommendations.</p>
         </div>
         <div class="section-card">
             <h3>💡 Mom Tips</h3>
-            <p>Evidence-based parenting advice and newborn care tips</p>
+            <p>Evidence-based parenting advice and newborn care tips that actually work in real life situations.</p>
         </div>
         <div class="section-card">
             <h3>⭐ Honest Reviews</h3>
-            <p>Detailed product testing and real mom experiences</p>
+            <p>Detailed product testing and real mom experiences without sponsored bias or fake recommendations.</p>
         </div>
         <div class="section-card">
             <h3>👩‍👧 About Us</h3>
-            <p>Our mission to support moms with trustworthy guidance</p>
+            <p>Our mission to support moms with trustworthy, evidence-based guidance and real community support.</p>
         </div>
     </section>
 
+    <!-- الفوتر -->
     <footer class="footer">
         <p>&copy; 2024 Bloom & Cuddle. All rights reserved.</p>
-        <p>Made with 💜 for amazing moms</p>
+        <p>Made with 💜 for amazing moms everywhere</p>
     </footer>
 </body>
 </html>
