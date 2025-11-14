@@ -8,9 +8,8 @@
         /* ===== GOOGLE FONTS ===== */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&family=Playfair+Display:wght@500&display=swap');
 
-        /* ===== CSS VARIABLES - EASY TO MODIFY ===== */
+        /* ===== CSS VARIABLES ===== */
         :root {
-            /* Colors */
             --primary-purple: #B8A3D3;
             --mint-green: #A8E6CF;
             --warm-white: #FAF9F7;
@@ -18,20 +17,6 @@
             --text-gray: #3A3A3C;
             --white: #FFFFFF;
             --soft-bg: #F8F9FA;
-            
-            /* Spacing - Easy to adjust */
-            --spacing-hero: 100px;
-            --spacing-large: 80px;
-            --spacing-medium: 50px;
-            --spacing-small: 30px;
-            --spacing-tiny: 20px;
-            
-            /* Typography */
-            --font-hero: 42px;
-            --font-large: 32px;
-            --font-medium: 24px;
-            --font-small: 18px;
-            --font-tiny: 14px;
         }
 
         /* ===== RESET & BASE STYLES ===== */
@@ -48,20 +33,20 @@
             line-height: 1.6;
         }
 
-        /* ===== TYPOGRAPHY - HIERARCHICAL ===== */
+        /* ===== TYPOGRAPHY ===== */
         h1, h2, h3, h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
 
-        h1 { font-size: var(--font-hero); }
-        h2 { font-size: var(--font-large); }
-        h3 { font-size: var(--font-medium); }
-        h4 { font-size: var(--font-small); }
+        h1 { font-size: 32px; }
+        h2 { font-size: 28px; }
+        h3 { font-size: 22px; }
+        h4 { font-size: 18px; }
 
         .playfair-display {
             font-family: 'Playfair Display', serif;
-            font-size: 26px;
+            font-size: 24px;
         }
 
         /* ===== LAYOUT UTILITIES ===== */
@@ -71,67 +56,50 @@
             padding: 0 20px;
         }
 
-        /* ===== BUTTONS - CONTRAST IMPROVED ===== */
+        .section-spacing {
+            padding: 60px 0;
+        }
+
+        /* ===== BUTTONS ===== */
         .btn {
             display: inline-block;
-            padding: 14px 24px;
-            border-radius: 12px;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
+            font-weight: 500;
+            font-size: 14px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-align: center;
         }
 
         .btn-primary {
             background-color: var(--primary-purple);
             color: var(--white);
-            box-shadow: 0 4px 12px rgba(184, 163, 211, 0.3);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(184, 163, 211, 0.4);
+        .btn-outline {
+            border: 2px solid var(--primary-purple);
+            color: var(--primary-purple);
+            background: transparent;
         }
 
-        .btn-large {
-            padding: 18px 32px;
-            font-size: 18px;
-            border-radius: 16px;
-        }
-
-        .btn-mint {
-            background-color: var(--mint-green);
-            color: var(--text-gray);
-            font-weight: 500;
-        }
-
-        .btn-small {
-            padding: 10px 18px;
-            font-size: 14px;
-            border-radius: 8px;
-        }
-
-        /* ===== NAVIGATION - MOBILE FIRST ===== */
+        /* ===== NAVIGATION ===== */
         .navbar {
             background-color: var(--warm-white);
-            height: 70px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .nav-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 0 20px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            align-items: center;
         }
 
         .logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--primary-purple);
         }
@@ -141,23 +109,18 @@
         }
 
         .nav-cta {
-            display: inline-block;
-            padding: 10px 18px;
             background-color: var(--primary-purple);
             color: var(--white);
-            border-radius: 10px;
+            padding: 8px 16px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
             font-size: 14px;
         }
 
-        /* ===== HERO SECTION - HIGH PRIORITY ===== */
+        /* ===== HERO SECTION ===== */
         .hero {
-            background: linear-gradient(rgba(250, 249, 247, 0.85), rgba(250, 249, 247, 0.9)), 
-                        url('https://images.unsplash.com/photo-1544006656-7cc555e7e3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: var(--spacing-hero) 0;
+            background-color: var(--warm-white);
+            padding: 80px 0;
             text-align: center;
         }
 
@@ -166,173 +129,94 @@
             margin: 0 auto;
         }
 
-        .hero-text h1 {
-            margin-bottom: var(--spacing-tiny);
-            line-height: 1.2;
+        .hero h1 {
+            margin-bottom: 20px;
+            line-height: 1.3;
         }
 
-        .hero-text p {
-            font-size: var(--font-small);
-            margin-bottom: var(--spacing-medium);
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
             color: var(--text-gray);
         }
 
-        .hero-cta {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-            margin-top: var(--spacing-medium);
-        }
-
-        /* ===== WHY TRUST US - LOW PRIORITY ===== */
+        /* ===== WHY TRUST US - LOW PROFILE ===== */
         .why-trust {
             background-color: var(--soft-bg);
-            padding: var(--spacing-small) 0;
-        }
-
-        .trust-section {
-            text-align: center;
-            margin-bottom: var(--spacing-tiny);
+            padding: 40px 0;
         }
 
         .trust-items {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-tiny);
+            gap: 15px;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            text-align: center;
             padding: 15px;
-            background: var(--white);
-            border-radius: 10px;
-            border: 1px solid var(--light-gray);
         }
 
-        .trust-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-purple);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 18px;
-            flex-shrink: 0;
+        .trust-item h4 {
+            margin-bottom: 8px;
+            color: var(--primary-purple);
         }
 
-        .trust-text h4 {
-            margin-bottom: 5px;
-            text-align: left;
-        }
-
-        .trust-text p {
-            font-size: 14px;
-            color: var(--text-gray);
-            text-align: left;
-            line-height: 1.4;
-        }
-
-        /* ===== GUIDED NAVIGATION - LOW PRIORITY ===== */
+        /* ===== GUIDED NAVIGATION ===== */
         .guided-nav {
-            background-color: var(--warm-white);
-            padding: var(--spacing-medium) 0;
+            padding: 50px 0;
         }
 
         .guide-cards {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-tiny);
-            margin-top: var(--spacing-small);
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .guide-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            padding: var(--spacing-tiny);
             text-align: center;
-            border: 1px solid var(--light-gray);
+            padding: 20px;
         }
 
-        .guide-image {
-            background-color: var(--light-gray);
-            height: 80px;
-            border-radius: 10px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-gray);
-            font-size: 24px;
+        .guide-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
         }
 
-        .guide-card h4 {
-            margin-bottom: 8px;
-        }
-
-        .guide-card p {
-            font-size: 14px;
-            color: var(--text-gray);
-        }
-
-        /* ===== FEATURED GUIDES - MEDIUM PRIORITY ===== */
+        /* ===== FEATURED GUIDES ===== */
         .featured-guides {
             background-color: var(--soft-bg);
-            padding: var(--spacing-medium) 0;
+            padding: 50px 0;
         }
 
         .guide-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-small);
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .guide-item {
             background-color: var(--white);
-            border-radius: 12px;
-            padding: var(--spacing-tiny);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
             border: 1px solid var(--light-gray);
         }
 
-        .guide-item-image {
-            background-color: var(--light-gray);
-            height: 120px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-gray);
-            font-size: 32px;
-        }
-
-        .guide-item-content h3 {
-            margin-bottom: 10px;
-        }
-
-        .guide-item-content p {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: var(--text-gray);
-        }
-
-        /* ===== PRODUCT PICKS - LOW PRIORITY ===== */
+        /* ===== PRODUCT PICKS - LOW PROFILE ===== */
         .product-picks {
-            background-color: var(--warm-white);
-            padding: var(--spacing-small) 0;
+            padding: 40px 0;
         }
 
         .product-scroll {
             display: flex;
-            gap: var(--spacing-tiny);
+            gap: 20px;
             overflow-x: auto;
-            padding: 10px 0;
+            padding: 20px 0;
             scrollbar-width: none;
         }
 
@@ -342,40 +226,29 @@
 
         .product-card {
             background-color: var(--white);
-            border-radius: 12px;
-            padding: 15px;
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
             border: 1px solid var(--light-gray);
-            min-width: 200px;
+            min-width: 250px;
             flex-shrink: 0;
         }
 
         .product-image {
             background-color: var(--light-gray);
-            height: 100px;
-            border-radius: 10px;
-            margin-bottom: 12px;
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-gray);
-            font-size: 24px;
         }
 
-        .product-card h4 {
-            margin-bottom: 8px;
-        }
-
-        .product-card p {
-            font-size: 12px;
-            margin-bottom: 12px;
-            color: var(--text-gray);
-        }
-
-        /* ===== MAIN CTA - HIGH PRIORITY ===== */
+        /* ===== MAIN CTA ===== */
         .main-cta {
             background-color: rgba(184, 163, 211, 0.1);
-            padding: var(--spacing-large) 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -385,71 +258,55 @@
         }
 
         .cta-content .playfair-display {
-            margin-bottom: var(--spacing-tiny);
+            margin-bottom: 20px;
         }
 
         .cta-content p {
-            font-size: var(--font-small);
-            margin-bottom: var(--spacing-medium);
+            margin-bottom: 25px;
         }
 
-        /* ===== ABOUT US - LOW PRIORITY ===== */
+        /* ===== ABOUT US ===== */
         .about-us {
-            background-color: var(--soft-bg);
-            padding: var(--spacing-medium) 0;
+            padding: 50px 0;
         }
 
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-small);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .about-image {
-            background: linear-gradient(135deg, var(--mint-green) 0%, var(--primary-purple) 100%);
-            border-radius: 12px;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 16px;
+        .about-content h2 {
+            margin-bottom: 20px;
         }
 
-        .about-text h2 {
-            margin-bottom: var(--spacing-tiny);
-        }
-
-        .about-text p {
-            font-size: 14px;
+        .about-content p {
             margin-bottom: 15px;
-            color: var(--text-gray);
         }
 
         /* ===== FOOTER ===== */
         .footer {
             background-color: var(--text-gray);
             color: var(--white);
-            padding: var(--spacing-medium) 0 var(--spacing-tiny);
+            padding: 50px 0 20px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--spacing-small);
-            margin-bottom: var(--spacing-small);
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-brand h3 {
             color: var(--white);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .footer-links h4,
         .footer-legal h4 {
             color: var(--white);
-            margin-bottom: 12px;
-            font-size: 16px;
+            margin-bottom: 15px;
         }
 
         .footer-links a,
@@ -457,46 +314,33 @@
             color: var(--light-gray);
             text-decoration: none;
             display: block;
-            margin-bottom: 6px;
-            transition: color 0.3s ease;
-            font-size: 14px;
-        }
-
-        .footer-links a:hover,
-        .footer-legal a:hover {
-            color: var(--white);
+            margin-bottom: 8px;
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: var(--spacing-tiny);
+            padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: var(--light-gray);
-            font-size: 14px;
         }
 
         /* ===== DESKTOP ENHANCEMENTS ===== */
         @media (min-width: 768px) {
-            :root {
-                --spacing-hero: 140px;
-                --font-hero: 48px;
-            }
+            h1 { font-size: 42px; }
             
             .nav-links {
                 display: flex;
-                gap: 25px;
+                gap: 30px;
             }
             
             .nav-links a {
                 text-decoration: none;
                 color: var(--text-gray);
-                font-size: 15px;
                 transition: color 0.3s ease;
             }
             
             .trust-items {
                 grid-template-columns: repeat(3, 1fr);
-                max-width: 100%;
             }
             
             .guide-cards,
@@ -508,23 +352,16 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 overflow-x: visible;
+                gap: 25px;
             }
             
             .footer-content {
                 grid-template-columns: repeat(3, 1fr);
             }
             
-            .about-content {
-                grid-template-columns: 1fr 1fr;
-            }
-            
             .hero {
                 text-align: left;
-            }
-            
-            .hero-cta {
-                flex-direction: row;
-                justify-content: center;
+                padding: 120px 0;
             }
         }
     </style>
@@ -532,176 +369,132 @@
 <body>
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
-        <div class="logo">Bloom & Cuddle</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#guides">Guides</a>
-            <a href="#products">Product Picks</a>
-            <a href="#resources">Resources</a>
-            <a href="#about">About</a>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Bloom & Cuddle</div>
+                <div class="nav-links">
+                    <a href="#guides">Guides</a>
+                    <a href="#products">Product Picks</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#about">About</a>
+                </div>
+                <a href="#checklist" class="nav-cta">Get the Newborn Essentials Starter Guide</a>
+            </div>
         </div>
-        <a href="#checklist" class="nav-cta">Get Checklist</a>
     </nav>
 
-    <!-- ===== HERO - HIGH PRIORITY ===== -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Trusted Newborn Support — From One Mom to Another</h1>
-                    <p>Simple, evidence-informed tips and real-mom product picks to help you feel more confident, less overwhelmed, and a lot more supported in your newborn journey.</p>
-                    
-                    <div class="hero-cta">
-                        <a href="#checklist" class="btn btn-primary btn-large">Get Your Free Newborn Checklist</a>
-                    </div>
-                </div>
+                <h1>Trusted Newborn Support — From One Mom to Another</h1>
+                <p>Simple, evidence-informed tips and real-mom product picks to help you feel more confident, less overwhelmed, and a lot more supported in your newborn journey.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== WHY TRUST US - LOW PRIORITY ===== -->
+    <!-- ===== WHY MOMS TRUST US ===== -->
     <section class="why-trust">
         <div class="container">
-            <div class="trust-section">
-                <h3>Why Moms Trust Us</h3>
-            </div>
             <div class="trust-items">
                 <div class="trust-item">
-                    <div class="trust-icon">📚</div>
-                    <div class="trust-text">
-                        <h4>Evidence-Informed</h4>
-                        <p>Guidance grounded in pediatric sources</p>
-                    </div>
+                    <h4>Guidance grounded in reputable pediatric sources</h4>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">👩‍👧</div>
-                    <div class="trust-text">
-                        <h4>Real-Mom Tested</h4>
-                        <p>Approved by real moms in our community</p>
-                    </div>
+                    <h4>Real-mom tested advice and product insights</h4>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">💫</div>
-                    <div class="trust-text">
-                        <h4>Honest & Unbiased</h4>
-                        <p>No sponsorships, just what truly works</p>
-                    </div>
+                    <h4>Honest product picks — no sponsorships or paid promotions</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== GUIDED NAVIGATION - LOW PRIORITY ===== -->
+    <!-- ===== GUIDED NAVIGATION ===== -->
     <section class="guided-nav">
         <div class="container">
-            <div class="section-title">
-                <h3>Find What You Need</h3>
-            </div>
+            <h2>Helping you find what you need — faster.</h2>
             <div class="guide-cards">
                 <div class="guide-card">
-                    <div class="guide-image">👶</div>
-                    <h4>Newborn Basics</h4>
-                    <p>Essential care and milestones</p>
+                    <div class="guide-icon">👶</div>
+                    <h3>Newborn Basics</h3>
                 </div>
                 <div class="guide-card">
-                    <div class="guide-image">🍼</div>
-                    <h4>Feeding & Sleep</h4>
-                    <p>Breastfeeding and sleep routines</p>
+                    <div class="guide-icon">🍼</div>
+                    <h3>Feeding & Sleep</h3>
                 </div>
                 <div class="guide-card">
-                    <div class="guide-image">🛍️</div>
-                    <h4>Product Picks</h4>
-                    <p>Mom-tested essential products</p>
+                    <div class="guide-icon">🛍️</div>
+                    <h3>Product Picks</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FEATURED GUIDES - MEDIUM PRIORITY ===== -->
+    <!-- ===== FEATURED GUIDES ===== -->
     <section class="featured-guides" id="guides">
         <div class="container">
-            <div class="section-title">
-                <h2>Essential Guides</h2>
-            </div>
+            <h2>Our most-loved, mom-approved guides to help you start with clarity.</h2>
             <div class="guide-grid">
                 <div class="guide-item">
-                    <div class="guide-item-image">🛌</div>
-                    <div class="guide-item-content">
-                        <h3>Newborn Sleep Basics</h3>
-                        <p>Understanding sleep cycles, safe sleep practices, and establishing routines.</p>
-                        <a href="#" class="btn btn-small" style="border: 2px solid var(--primary-purple); color: var(--primary-purple); background: transparent;">Read Guide</a>
-                    </div>
+                    <h3>Guide 1</h3>
+                    <p>Content to be added later</p>
                 </div>
                 <div class="guide-item">
-                    <div class="guide-item-image">🥛</div>
-                    <div class="guide-item-content">
-                        <h3>Feeding Fundamentals</h3>
-                        <p>Breastfeeding tips, formula guidance, and recognizing hunger cues.</p>
-                        <a href="#" class="btn btn-small" style="border: 2px solid var(--primary-purple); color: var(--primary-purple); background: transparent;">Read Guide</a>
-                    </div>
+                    <h3>Guide 2</h3>
+                    <p>Content to be added later</p>
                 </div>
                 <div class="guide-item">
-                    <div class="guide-item-image">🧴</div>
-                    <div class="guide-item-content">
-                        <h3>Diapering 101</h3>
-                        <p>Everything about diapers, wipes, and preventing diaper rash.</p>
-                        <a href="#" class="btn btn-small" style="border: 2px solid var(--primary-purple); color: var(--primary-purple); background: transparent;">Read Guide</a>
-                    </div>
+                    <h3>Guide 3</h3>
+                    <p>Content to be added later</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== PRODUCT PICKS - LOW PRIORITY ===== -->
+    <!-- ===== PRODUCT PICKS ===== -->
     <section class="product-picks" id="products">
         <div class="container">
-            <div class="section-title">
-                <h3>Mom-Approved Products</h3>
-            </div>
+            <h2>Mom-tested choices with pediatric-informed review.</h2>
             <div class="product-scroll">
                 <div class="product-card">
-                    <div class="product-image">🧻</div>
-                    <h4>Gentle Wipes</h4>
-                    <p>Hypoallergenic & alcohol-free</p>
-                    <a href="#" class="btn btn-mint btn-small">View on Amazon</a>
+                    <div class="product-image">Product Image</div>
+                    <h4>Product Name</h4>
+                    <p>Product description</p>
+                    <a href="#" class="btn btn-outline">View on Amazon</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👕</div>
-                    <h4>Organic Swaddles</h4>
-                    <p>100% cotton & breathable</p>
-                    <a href="#" class="btn btn-mint btn-small">View on Amazon</a>
+                    <div class="product-image">Product Image</div>
+                    <h4>Product Name</h4>
+                    <p>Product description</p>
+                    <a href="#" class="btn btn-outline">View on Amazon</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">👶</div>
-                    <h4>Baby Carrier</h4>
-                    <p>Ergonomic & comfortable</p>
-                    <a href="#" class="btn btn-mint btn-small">View on Amazon</a>
+                    <div class="product-image">Product Image</div>
+                    <h4>Product Name</h4>
+                    <p>Product description</p>
+                    <a href="#" class="btn btn-outline">View on Amazon</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== MAIN CTA - HIGH PRIORITY ===== -->
+    <!-- ===== MAIN CTA ===== -->
     <section class="main-cta" id="checklist">
         <div class="cta-content">
-            <div class="playfair-display">Feel Prepared, Not Overwhelmed</div>
-            <p>Get our simple, evidence-informed guide to feel calmer and more confident in the first weeks.</p>
-            <a href="#checklist" class="btn btn-primary btn-large">Download Your Free Guide</a>
+            <div class="playfair-display">Feel More Prepared — Not Overwhelmed</div>
+            <p>A simple, evidence-informed guide to help you feel calmer and more confident in the first weeks. You don't have to figure everything out alone.</p>
+            <a href="#checklist" class="btn btn-primary">Download your free guide</a>
         </div>
     </section>
 
-    <!-- ===== ABOUT US - LOW PRIORITY ===== -->
+    <!-- ===== ABOUT US ===== -->
     <section class="about-us" id="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-image">
-                    <span>About Us Photo</span>
-                </div>
-                <div class="about-text">
-                    <h2>A Mom-to-Mom Space</h2>
-                    <p>I created Bloom & Cuddle to give you what I wish I had as a new mom: simple guidance, expert-reviewed insights, and honest recommendations you can truly trust.</p>
-                    <p>We bring together real-mom experience and pediatric-informed knowledge to support you with calm and confidence.</p>
-                </div>
+                <h2>About Us</h2>
+                <p>I'm a mom who went through the same late-night searches, endless opinions, and overwhelming product choices — so I created a space that gives you what I wish I had: simple guidance, expert-reviewed insights, and honest recommendations you can truly trust.</p>
+                <p>Here, we bring together real-mom experience and pediatric-informed knowledge to support you with calm, clarity, and confidence — one small step at a time.</p>
             </div>
         </div>
     </section>
@@ -712,21 +505,24 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Bloom & Cuddle</h3>
-                    <p>Evidence-informed tips and honest product recommendations for newborns 0–6 months.</p>
+                    <p>Evidence-informed tips, real-mom experience, and honest product recommendations for newborns 0–6 months.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <a href="#home">Home</a>
-                    <a href="#guides">Guides</a>
-                    <a href="#products">Products</a>
+                    <a href="#guides">Newborn Basics</a>
+                    <a href="#sleep">Sleep</a>
+                    <a href="#feeding">Feeding</a>
+                    <a href="#products">Product Picks</a>
                     <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-legal">
                     <h4>Legal</h4>
-                    <a href="#privacy">Privacy</a>
-                    <a href="#terms">Terms</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Use</a>
                     <a href="#affiliate">Affiliate Disclosure</a>
-                    <p style="color: var(--light-gray); font-size: 12px; margin-top: 8px;">We only recommend products we genuinely trust.</p>
+                    <p style="color: var(--light-gray); font-size: 12px; margin-top: 10px;">We may earn commissions from Amazon at no extra cost to you. We only recommend products we genuinely trust.</p>
                 </div>
             </div>
             <div class="footer-bottom">
