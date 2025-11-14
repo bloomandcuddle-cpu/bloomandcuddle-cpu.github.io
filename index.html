@@ -41,7 +41,7 @@
         /* قسم الهيرو المحسن */
         .hero {
             background-color: #FFFFFF;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
@@ -65,28 +65,24 @@
         .hero .pre-cta {
             color: #B8A3D3;
             font-size: 1.1rem;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-style: italic;
         }
 
-        /* الزر المحسن */
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #2E8B57, #3CB371);
-            color: white;
-            padding: 18px 35px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 15px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+        /* تحسينات لنموذج Mailchimp */
+        .mailchimp-form {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 500px;
+            border: 2px solid #A8E6CF;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+        .mailchimp-form h2 {
+            color: #B8A3D3;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
         }
 
         .micro-assurance {
@@ -165,6 +161,7 @@
             .hero .subheadline { font-size: 1.1rem; }
             .sections { grid-template-columns: 1fr; padding: 30px 15px; }
             .trust-badges { flex-direction: column; gap: 15px; }
+            .mailchimp-form { padding: 20px; margin: 20px 15px; }
         }
     </style>
 </head>
@@ -182,10 +179,50 @@
         <p class="subheadline">Created by real moms, approved by pediatricians — everything you need for calmer nights and guilt-free mornings.</p>
         
         <p class="pre-cta">Tired of the mom guilt? Let's fix that together.</p>
-        
-        <a href="#" class="cta-button">Get My Free Cheat Sheet</a>
-        
-        <p class="micro-assurance">💌 We'll send it straight to your inbox — no spam, ever.</p>
+
+        <!-- نموذج Mailchimp -->
+        <div class="mailchimp-form">
+            <h2>📋 Get Your Free Ultimate Newborn Checklist</h2>
+            <div id="mc_embed_shell">
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup{background:#f8f9fa; clear:left; font:14px Helvetica,Arial,sans-serif; width: 100%; border-radius: 10px;}
+                    #mc_embed_signup .button {
+                        background: linear-gradient(135deg, #2E8B57, #3CB371) !important;
+                        border: none !important;
+                        border-radius: 8px !important;
+                        font-weight: bold !important;
+                    }
+                </style>
+                <div id="mc_embed_signup">
+                    <form action="https://gmail.us2.list-manage.com/subscribe/post?u=3fb474bb32938e63a769bb905&amp;id=e02877e9b6&amp;f_id=008ce8e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="your.email@example.com">
+                            </div>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display: none;"></div>
+                                <div class="response" id="mce-success-response" style="display: none;"></div>
+                            </div>
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                <input type="text" name="b_3fb474bb32938e63a769bb905_e02877e9b6" tabindex="-1" value="">
+                            </div>
+                            <div class="optionalParent">
+                                <div class="clear foot">
+                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Send Me The Free Checklist">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            </div>
+            
+            <p class="micro-assurance">💌 We'll send it straight to your inbox — no spam, ever.</p>
+        </div>
 
         <!-- شارات الثقة -->
         <div class="trust-badges">
