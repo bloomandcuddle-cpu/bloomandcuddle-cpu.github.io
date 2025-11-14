@@ -16,7 +16,7 @@
             --light-gray: #E7E7E7;
             --text-gray: #3A3A3C;
             --white: #FFFFFF;
-            --soft-bg: #F8F9FA;
+            --soft-purple: #F0E8F8;
         }
 
         /* ===== RESET & BASE STYLES ===== */
@@ -73,11 +73,21 @@
             color: var(--white);
         }
 
-        /* ===== NAVIGATION ===== */
+        .btn-small {
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+
+        /* ===== NAVIGATION - FIXED FOR MOBILE ===== */
         .navbar {
             background-color: var(--warm-white);
-            padding: 20px 0;
+            padding: 15px 0;
             border-bottom: 1px solid var(--light-gray);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .nav-content {
@@ -88,7 +98,7 @@
 
         .logo {
             font-family: 'Poppins', sans-serif;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--primary-purple);
         }
@@ -97,123 +107,101 @@
             display: none;
         }
 
+        .nav-cta {
+            background-color: var(--primary-purple);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
         /* ===== HERO SECTION ===== */
         .hero {
             background-color: var(--warm-white);
-            padding: 80px 0;
-            text-align: center;
+            padding: 100px 0 80px;
+            margin-top: 60px;
         }
 
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
         }
 
-        .hero h1 {
+        .hero-text h1 {
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .hero-subheadline {
+        .hero-text p {
             font-size: 18px;
-            margin-bottom: 25px;
-            color: var(--text-gray);
-        }
-
-        .hero-support-line {
-            font-size: 16px;
             margin-bottom: 30px;
             color: var(--text-gray);
-            font-weight: 500;
         }
 
-        .hero-cta {
-            margin-bottom: 15px;
+        .hero-image {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--mint-green) 100%);
+            border-radius: 20px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 16px;
         }
 
-        .cta-microcopy {
-            font-size: 14px;
-            color: var(--text-gray);
-        }
-
-        /* ===== WHY TRUST US ===== */
-        .why-trust {
-            background-color: var(--soft-bg);
-            padding: 50px 0;
+        /* ===== TRUST INDICATORS ===== */
+        .trust-indicators {
+            background-color: var(--soft-purple);
+            padding: 40px 0;
         }
 
         .trust-items {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
+            text-align: center;
         }
 
         .trust-item {
-            text-align: center;
             padding: 20px;
         }
 
-        .trust-item h4 {
-            color: var(--text-gray);
-            font-weight: 500;
-        }
-
-        /* ===== GUIDED NAVIGATION ===== */
-        .guided-nav {
-            padding: 50px 0;
-            background-color: var(--warm-white);
-        }
-
-        .section-title-small {
-            text-align: center;
-            font-size: 14px;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .guide-cards {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .guide-card {
-            text-align: center;
-            padding: 25px;
-            background-color: var(--white);
-            border-radius: 12px;
-            border: 1px solid var(--light-gray);
-        }
-
-        .guide-icon {
+        .trust-icon {
             font-size: 32px;
             margin-bottom: 15px;
         }
 
-        /* ===== HELPFUL READS SECTION ===== */
+        .trust-item h4 {
+            color: var(--primary-purple);
+            margin-bottom: 10px;
+        }
+
+        .trust-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* ===== HELPFUL READS ===== */
         .helpful-reads {
             padding: 50px 0;
-            background-color: var(--soft-bg);
+            background-color: var(--warm-white);
         }
 
         .reads-title {
             text-align: center;
             font-size: 14px;
-            color: var(--text-gray);
-            margin-bottom: 30px;
+            color: var(--primary-purple);
+            margin-bottom: 40px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            background-color: var(--white);
-            padding: 10px 20px;
+            background-color: var(--soft-purple);
+            padding: 12px 24px;
             border-radius: 20px;
             display: inline-block;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            border: 1px solid var(--light-gray);
         }
 
         .reads-grid {
@@ -224,14 +212,14 @@
 
         .read-item {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            border: 1px solid var(--light-gray);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .read-image {
             background-color: var(--light-gray);
-            height: 200px;
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -244,31 +232,73 @@
             text-align: center;
         }
 
-        /* ===== MAIN CTA ===== */
+        /* ===== GUIDED NAVIGATION ===== */
+        .guided-nav {
+            padding: 50px 0;
+            background-color: var(--soft-purple);
+        }
+
+        .guide-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .guide-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .guide-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .guide-card h3 {
+            color: var(--primary-purple);
+        }
+
+        /* ===== MAIN CTA SECTION ===== */
         .main-cta {
-            background-color: rgba(184, 163, 211, 0.1);
-            padding: 60px 20px;
+            background-color: var(--warm-white);
+            padding: 80px 0;
             text-align: center;
         }
 
         .cta-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .cta-content h2 {
+        .cta-content h1 {
             margin-bottom: 20px;
-            font-family: 'Poppins', sans-serif;
+            line-height: 1.2;
         }
 
-        .cta-content p {
+        .cta-subheadline {
+            font-size: 18px;
             margin-bottom: 25px;
+            color: var(--text-gray);
+        }
+
+        .cta-support-line {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .cta-microcopy {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-top: 15px;
         }
 
         /* ===== ABOUT US ===== */
         .about-us {
-            padding: 50px 0;
-            background-color: var(--warm-white);
+            padding: 60px 0;
+            background-color: var(--soft-purple);
         }
 
         .about-content {
@@ -327,7 +357,7 @@
 
         /* ===== DESKTOP ENHANCEMENTS ===== */
         @media (min-width: 768px) {
-            h1 { font-size: 48px; }
+            h1 { font-size: 42px; }
             
             .nav-links {
                 display: flex;
@@ -338,12 +368,19 @@
                 text-decoration: none;
                 color: var(--text-gray);
                 transition: color 0.3s ease;
+                font-size: 14px;
             }
             
-            .trust-items {
-                grid-template-columns: repeat(3, 1fr);
+            .hero-content {
+                grid-template-columns: 55% 45%;
             }
             
+            .hero {
+                padding: 140px 0 100px;
+                margin-top: 80px;
+            }
+            
+            .trust-items,
             .guide-cards,
             .reads-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -353,9 +390,23 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             
-            .hero {
-                text-align: left;
-                padding: 120px 0;
+            .cta-content h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                gap: 40px;
+            }
+            
+            .nav-links a {
+                font-size: 16px;
+            }
+            
+            .nav-cta {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -367,10 +418,13 @@
             <div class="nav-content">
                 <div class="logo">Bloom & Cuddle</div>
                 <div class="nav-links">
+                    <a href="#home">Home</a>
                     <a href="#guides">Guides</a>
+                    <a href="#products">Product Picks</a>
                     <a href="#resources">Resources</a>
                     <a href="#about">About</a>
                 </div>
+                <a href="#checklist" class="nav-cta">Get the Newborn Essentials Starter Guide</a>
             </div>
         </div>
     </nav>
@@ -379,30 +433,69 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Stop the 3AM Crying: Download the Community-Built Cheat Sheet That Helps Calm Gas & Reflux Sooner</h1>
-                <p class="hero-subheadline">Gentle, evidence-informed tips shaped by real moms and reviewed through trusted pediatric sources — giving you clarity, confidence, and support during the toughest newborn nights.</p>
-                <p class="hero-support-line">You're not doing anything wrong — your baby's tummy just needs a little help. This simple guide walks you through the steps that bring calmer nights closer.</p>
-                
-                <div class="hero-cta">
-                    <a href="#download" class="btn btn-primary">Download the Free Calming Cheat Sheet</a>
+                <div class="hero-text">
+                    <h1>Trusted Newborn Support — From One Mom to Another</h1>
+                    <p>Simple, evidence-informed tips and real-mom product picks to help you feel more confident, less overwhelmed, and a lot more supported in your newborn journey.</p>
+                    <a href="#checklist" class="btn btn-primary">Download the Free Newborn Essentials Checklist</a>
                 </div>
-                <p class="cta-microcopy">1 simple page. Real-mom insights. Evidence-informed relief.</p>
+                <div class="hero-image">
+                    <!-- ستستبدل بصورة -->
+                    <span>Mom + Baby Photo</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== WHY MOMS TRUST US ===== -->
-    <section class="why-trust">
+    <!-- ===== TRUST INDICATORS ===== -->
+    <section class="trust-indicators">
         <div class="container">
             <div class="trust-items">
                 <div class="trust-item">
-                    <h4>Guidance grounded in reputable pediatric sources</h4>
+                    <div class="trust-icon">📚</div>
+                    <h4>Evidence-Informed Guidance</h4>
+                    <p>Guidance grounded in reputable pediatric sources</p>
                 </div>
                 <div class="trust-item">
-                    <h4>Real-mom tested advice and product insights</h4>
+                    <div class="trust-icon">👩‍👧</div>
+                    <h4>Real-Mom Support</h4>
+                    <p>Advice and product insights tested by real moms</p>
                 </div>
                 <div class="trust-item">
-                    <h4>Honest product picks — no sponsorships or paid promotions</h4>
+                    <div class="trust-icon">💫</div>
+                    <h4>Honest Recommendations</h4>
+                    <p>No sponsorships, no paid promotions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HELPFUL READS ===== -->
+    <section class="helpful-reads" id="guides">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div class="reads-title">More helpful reads for your newborn journey</div>
+            </div>
+            <div class="reads-grid">
+                <div class="read-item">
+                    <div class="read-image">Article Image 1</div>
+                    <div class="read-content">
+                        <h3>Article Title 1</h3>
+                        <p>Article description will be added later</p>
+                    </div>
+                </div>
+                <div class="read-item">
+                    <div class="read-image">Article Image 2</div>
+                    <div class="read-content">
+                        <h3>Article Title 2</h3>
+                        <p>Article description will be added later</p>
+                    </div>
+                </div>
+                <div class="read-item">
+                    <div class="read-image">Article Image 3</div>
+                    <div class="read-content">
+                        <h3>Article Title 3</h3>
+                        <p>Article description will be added later</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -411,7 +504,9 @@
     <!-- ===== GUIDED NAVIGATION ===== -->
     <section class="guided-nav">
         <div class="container">
-            <div class="section-title-small">Helping you find what you need — faster.</div>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div class="reads-title">Helping you find what you need — faster.</div>
+            </div>
             <div class="guide-cards">
                 <div class="guide-card">
                     <div class="guide-icon">👶</div>
@@ -429,42 +524,17 @@
         </div>
     </section>
 
-    <!-- ===== HELPFUL READS SECTION ===== -->
-    <section class="helpful-reads" id="guides">
+    <!-- ===== MAIN CTA SECTION ===== -->
+    <section class="main-cta" id="checklist">
         <div class="container">
-            <div class="reads-title">More helpful reads for your newborn journey</div>
-            <div class="reads-grid">
-                <div class="read-item">
-                    <div class="read-image">Article Image 1</div>
-                    <div class="read-content">
-                        <h3>Understanding Newborn Sleep</h3>
-                        <p>Learn about sleep cycles and safe sleep practices</p>
-                    </div>
-                </div>
-                <div class="read-item">
-                    <div class="read-image">Article Image 2</div>
-                    <div class="read-content">
-                        <h3>Feeding Fundamentals</h3>
-                        <p>Breastfeeding and formula feeding guide</p>
-                    </div>
-                </div>
-                <div class="read-item">
-                    <div class="read-image">Article Image 3</div>
-                    <div class="read-content">
-                        <h3>Diapering Essentials</h3>
-                        <p>Everything you need to know about diapering</p>
-                    </div>
-                </div>
+            <div class="cta-content">
+                <h1>Stop the 3AM Crying: Download the Community-Built Cheat Sheet That Helps Calm Gas & Reflux Sooner</h1>
+                <p class="cta-subheadline">Gentle, evidence-informed tips shaped by real moms and reviewed through trusted pediatric sources — giving you clarity, confidence, and support during the toughest newborn nights.</p>
+                <p class="cta-support-line">You're not doing anything wrong — your baby's tummy just needs a little help. This simple guide walks you through the steps that bring calmer nights closer.</p>
+                
+                <a href="#download" class="btn btn-primary">Download the Free Calming Cheat Sheet</a>
+                <p class="cta-microcopy">1 simple page. Real-mom insights. Evidence-informed relief.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- ===== MAIN CTA ===== -->
-    <section class="main-cta" id="download">
-        <div class="cta-content">
-            <h2>Feel More Prepared — Not Overwhelmed</h2>
-            <p>A simple, evidence-informed guide to help you feel calmer and more confident in the first weeks. You don't have to figure everything out alone.</p>
-            <a href="#download" class="btn btn-primary">Download your free guide</a>
         </div>
     </section>
 
@@ -493,7 +563,9 @@
                     <a href="#guides">Newborn Basics</a>
                     <a href="#sleep">Sleep</a>
                     <a href="#feeding">Feeding</a>
+                    <a href="#products">Product Picks</a>
                     <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-legal">
                     <h4>Legal</h4>
