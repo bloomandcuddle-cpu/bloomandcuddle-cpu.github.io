@@ -93,7 +93,7 @@
             font-size: 14px;
         }
 
-        /* ===== NAVIGATION - FIXED MOBILE ISSUE ===== */
+        /* ===== NAVIGATION - UPDATED FOR MOBILE ===== */
         .navbar {
             background-color: var(--warm-white);
             padding: 15px 0;
@@ -117,8 +117,61 @@
             color: var(--primary-purple);
         }
 
+        /* القائمة الرئيسية للكمبيوتر */
         .nav-links {
             display: none;
+        }
+
+        /* زر القائمة للجوال */
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-text);
+            padding: 5px;
+        }
+
+        /* القائمة المنزلقة للجوال */
+        .mobile-menu {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: var(--warm-white);
+            border-bottom: 1px solid var(--light-gray);
+            padding: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .mobile-menu-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-links a:hover {
+            color: var(--primary-purple);
         }
 
         .nav-cta {
@@ -129,6 +182,7 @@
             text-decoration: none;
             font-size: 12px;
             font-weight: 500;
+            display: none; /* نخفيها على الجوال أولاً */
         }
 
         /* ===== HERO SECTION ===== */
@@ -390,6 +444,11 @@
         @media (min-width: 768px) {
             h1 { font-size: 42px; }
             
+            /* إخفاء قائمة الجوال وإظهار قائمة الكمبيوتر */
+            .mobile-menu-btn {
+                display: none;
+            }
+            
             .nav-links {
                 display: flex;
                 gap: 30px;
@@ -405,6 +464,10 @@
             
             .nav-links a:hover {
                 color: var(--primary-purple);
+            }
+            
+            .nav-cta {
+                display: inline-block; /* نظهرها على الكمبيوتر */
             }
             
             .hero-content {
@@ -453,6 +516,8 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">Bloom & Cuddle</div>
+                
+                <!-- قائمة الكمبيوتر -->
                 <div class="nav-links">
                     <a href="#home">Home</a>
                     <a href="#guides">Guides</a>
@@ -460,11 +525,28 @@
                     <a href="#resources">Resources</a>
                     <a href="#about">About</a>
                 </div>
+                
+                <!-- زر القائمة للجوال -->
+                <button class="mobile-menu-btn">☰</button>
+                
                 <a href="#checklist" class="nav-cta">Get the Newborn Essentials Starter Guide</a>
+            </div>
+        </div>
+        
+        <!-- القائمة المنزلقة للجوال -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="#home">Home</a>
+                <a href="#guides">Guides</a>
+                <a href="#products">Product Picks</a>
+                <a href="#resources">Resources</a>
+                <a href="#about">About</a>
+                <a href="#checklist" class="btn btn-primary btn-small" style="margin-top: 10px;">Get the Newborn Essentials Starter Guide</a>
             </div>
         </div>
     </nav>
 
+    <!-- باقي المحتوى يبقى كما هو -->
     <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="home">
         <div class="container">
@@ -481,6 +563,7 @@
         </div>
     </section>
 
+    <!-- الأقسام الأخرى تبقى كما هي -->
     <!-- ===== TRUST INDICATORS ===== -->
     <section class="trust-indicators">
         <div class="container">
@@ -615,5 +698,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // JavaScript لتشغيل قائمة الجوال
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
