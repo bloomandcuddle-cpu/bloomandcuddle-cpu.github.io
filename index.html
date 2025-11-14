@@ -11,10 +11,12 @@
         /* ===== CSS VARIABLES ===== */
         :root {
             --primary-purple: #B8A3D3;
+            --dark-purple: #9D88C0;
             --mint-green: #A8E6CF;
             --warm-white: #FAF9F7;
             --light-gray: #E7E7E7;
-            --text-gray: #3A3A3C;
+            --text-gray: #2A2A2A;
+            --dark-text: #1A1A1A;
             --white: #FFFFFF;
             --soft-purple: #F0E8F8;
         }
@@ -33,16 +35,21 @@
             line-height: 1.6;
         }
 
-        /* ===== TYPOGRAPHY ===== */
+        /* ===== TYPOGRAPHY - DARKER TEXT ===== */
         h1, h2, h3, h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
+            color: var(--dark-text);
         }
 
         h1 { font-size: 32px; }
         h2 { font-size: 24px; }
         h3 { font-size: 20px; }
         h4 { font-size: 18px; }
+
+        p {
+            color: var(--text-gray);
+        }
 
         /* ===== LAYOUT UTILITIES ===== */
         .container {
@@ -58,19 +65,26 @@
         /* ===== BUTTONS ===== */
         .btn {
             display: inline-block;
-            padding: 16px 26px;
+            padding: 18px 32px;
             border-radius: 16px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 18px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .btn-primary {
-            background-color: var(--primary-purple);
+            background-color: var(--dark-purple);
             color: var(--white);
+            box-shadow: 0 4px 15px rgba(157, 136, 192, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(157, 136, 192, 0.6);
         }
 
         .btn-small {
@@ -79,7 +93,7 @@
             font-size: 14px;
         }
 
-        /* ===== NAVIGATION - FIXED FOR MOBILE ===== */
+        /* ===== NAVIGATION - FIXED MOBILE ISSUE ===== */
         .navbar {
             background-color: var(--warm-white);
             padding: 15px 0;
@@ -176,7 +190,7 @@
         }
 
         .trust-item h4 {
-            color: var(--primary-purple);
+            color: var(--dark-purple);
             margin-bottom: 10px;
         }
 
@@ -194,7 +208,7 @@
         .reads-title {
             text-align: center;
             font-size: 14px;
-            color: var(--primary-purple);
+            color: var(--dark-purple);
             margin-bottom: 40px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -202,6 +216,7 @@
             padding: 12px 24px;
             border-radius: 20px;
             display: inline-block;
+            font-weight: 600;
         }
 
         .reads-grid {
@@ -232,6 +247,11 @@
             text-align: center;
         }
 
+        .read-content h3 {
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
         /* ===== GUIDED NAVIGATION ===== */
         .guided-nav {
             padding: 50px 0;
@@ -256,10 +276,10 @@
         }
 
         .guide-card h3 {
-            color: var(--primary-purple);
+            color: var(--dark-purple);
         }
 
-        /* ===== MAIN CTA SECTION ===== */
+        /* ===== MAIN CTA SECTION - UPDATED ===== */
         .main-cta {
             background-color: var(--warm-white);
             padding: 80px 0;
@@ -274,19 +294,28 @@
         .cta-content h1 {
             margin-bottom: 20px;
             line-height: 1.2;
+            color: var(--dark-text);
         }
 
         .cta-subheadline {
             font-size: 18px;
             margin-bottom: 25px;
             color: var(--text-gray);
+            font-weight: 500;
         }
 
         .cta-support-line {
             font-size: 16px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: var(--text-gray);
-            font-weight: 500;
+            font-style: italic;
+        }
+
+        .cta-closing {
+            font-size: 17px;
+            margin-bottom: 30px;
+            color: var(--dark-text);
+            font-weight: 600;
         }
 
         .cta-microcopy {
@@ -309,15 +338,17 @@
 
         .about-content h2 {
             margin-bottom: 20px;
+            color: var(--dark-text);
         }
 
         .about-content p {
             margin-bottom: 15px;
+            color: var(--text-gray);
         }
 
         /* ===== FOOTER ===== */
         .footer {
-            background-color: var(--text-gray);
+            background-color: var(--dark-text);
             color: var(--white);
             padding: 50px 0 20px;
         }
@@ -366,9 +397,14 @@
             
             .nav-links a {
                 text-decoration: none;
-                color: var(--text-gray);
+                color: var(--dark-text);
                 transition: color 0.3s ease;
                 font-size: 14px;
+                font-weight: 500;
+            }
+            
+            .nav-links a:hover {
+                color: var(--primary-purple);
             }
             
             .hero-content {
@@ -436,10 +472,9 @@
                 <div class="hero-text">
                     <h1>Trusted Newborn Support — From One Mom to Another</h1>
                     <p>Simple, evidence-informed tips and real-mom product picks to help you feel more confident, less overwhelmed, and a lot more supported in your newborn journey.</p>
-                    <a href="#checklist" class="btn btn-primary">Download the Free Newborn Essentials Checklist</a>
+                    <a href="#checklist" class="btn btn-primary btn-small">Download the Free Newborn Essentials Checklist</a>
                 </div>
                 <div class="hero-image">
-                    <!-- ستستبدل بصورة -->
                     <span>Mom + Baby Photo</span>
                 </div>
             </div>
@@ -524,16 +559,16 @@
         </div>
     </section>
 
-    <!-- ===== MAIN CTA SECTION ===== -->
+    <!-- ===== MAIN CTA SECTION - UPDATED ===== -->
     <section class="main-cta" id="checklist">
         <div class="container">
             <div class="cta-content">
-                <h1>Stop the 3AM Crying: Download the Community-Built Cheat Sheet That Helps Calm Gas & Reflux Sooner</h1>
-                <p class="cta-subheadline">Gentle, evidence-informed tips shaped by real moms and reviewed through trusted pediatric sources — giving you clarity, confidence, and support during the toughest newborn nights.</p>
-                <p class="cta-support-line">You're not doing anything wrong — your baby's tummy just needs a little help. This simple guide walks you through the steps that bring calmer nights closer.</p>
+                <h1>Stop the 3AM Crying — Get the Gas & Reflux Calming Cheat Sheet</h1>
+                <p class="cta-subheadline">A simple, evidence-informed guide that shows you what actually works to soothe gas and reflux — step by step.</p>
+                <p class="cta-support-line">Built with real mom experience and checked against trusted pediatric sources.</p>
+                <p class="cta-closing">Get the free cheat sheet and start bringing calmer nights closer.</p>
                 
-                <a href="#download" class="btn btn-primary">Download the Free Calming Cheat Sheet</a>
-                <p class="cta-microcopy">1 simple page. Real-mom insights. Evidence-informed relief.</p>
+                <a href="#download" class="btn btn-primary">Download the Free Cheat Sheet</a>
             </div>
         </div>
     </section>
