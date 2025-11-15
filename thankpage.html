@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكراً لك! - ملفاتك جاهزة للتحميل</title>
+    <title>Thank You! Your Downloads Are Ready</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -168,46 +168,35 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="headline">🎉 شكراً لك! ملفاتك جاهزة للتحميل 💜</h1>
+        <h1 class="headline">🎉 Thank you! Your downloads are ready 💜</h1>
         
         <p class="confirmation-text">
-            لقد أرسلنا نسخة إلى بريدك الإلكتروني — ولكن يمكنك أيضًا تنزيل أدلتك هنا مباشرةً.
+            We’ve sent a copy to your email — but you can also download your guides right here.
         </p>
         
         <div class="download-section">
-            <h2 style="text-align: center; margin-bottom: 24px; font-weight: 600;">👇 اختر ما تريد تنزيله:</h2>
+            <h2 style="text-align: center; margin-bottom: 24px; font-weight: 600;">👇 Choose what you want to download:</h2>
             
             <div class="download-card">
-                <h3>📁 ورقة الغش لتهدئة الغازات والارتجاع</h3>
-                <a href="#" class="download-btn lilac">💜 تنزيل ورقة الغش للغازات والارتجاع</a>
+                <h3>📁 Gas & Reflux Calming Cheat Sheet</h3>
+                <a href="#" class="download-btn lilac">💜 Download the Gas & Reflux Cheat Sheet</a>
             </div>
             
             <div class="download-card">
-                <h3>📁 قائمة أساسيات المولود الجديد</h3>
-                <a href="#" class="download-btn mint">💚 تنزيل قائمة المولود الجديد</a>
+                <h3>📁 Newborn Essentials Checklist</h3>
+                <a href="#" class="download-btn mint">💚 Download the Newborn Checklist</a>
             </div>
         </div>
         
-        <p class="reassurance-text">🔔 ⭐ آمن، لا بريد مزعج، تنزيل فوري</p>
+        <p class="reassurance-text">Safe, no spam, instant download</p>
     </div>
     
     <script>
-        // هذا الكود يحاكي إعادة التوجيه بعد إرسال النموذج
-        // في التطبيق الفعلي، سيتم تنفيذ هذا بعد إرسال النموذج إلى Mailchimp
-        
-        // محاكاة إرسال النموذج (لأغراض العرض فقط)
         document.addEventListener('DOMContentLoaded', function() {
-            // في التطبيق الفعلي، سيتم تنفيذ هذا بعد إرسال النموذج
-            // document.querySelector("form").addEventListener("submit", function() {
-            //     window.location.href = "/thank-you.html";
-            // });
-            
-            // إضافة وظائف التنزيل للزرين
             document.querySelectorAll('.download-btn').forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
-                    alert('سيبدأ تنزيل الملف الآن!');
-                    // هنا يمكنك إضافة منطق التنزيل الفعلي
+                    alert('Your download will start now!');
                 });
             });
         });
