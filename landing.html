@@ -36,6 +36,14 @@
             text-align: center;
         }
 
+        /* تعديل بسيط للتوازن على الموبايل فقط */
+        @media (max-width: 480px) {
+            .headline {
+                font-size: 32px;
+                line-height: 1.25;
+            }
+        }
+
         .headline {
             font-family: 'Playfair Display', serif;
             font-size: 38px;
@@ -75,6 +83,7 @@
             background: var(--lilac-dark);
         }
 
+        /* الجملة المطلوبة تحت الزر */
         .reassurance {
             font-size: 14px;
             color: rgba(0,0,0,0.55);
@@ -110,8 +119,8 @@
             <input type="submit" value="👉 Send Me My Free Resource" id="mc-embedded-subscribe">
         </form>
 
-        <!-- REASSURANCE -->
-        <p class="reassurance">You’ll get instant access right after you submit.</p>
+        <!-- REASSURANCE (المطلوبة) -->
+        <p class="reassurance">Safe & private — no spam ever.</p>
 
         <div class="footer">© 2025 Bloom & Cuddle</div>
     </div>
@@ -122,7 +131,6 @@
 
             const email = document.getElementById("mce-EMAIL").value;
 
-            // Mailchimp JSONP endpoint
             const url =
               "https://gmail.us2.list-manage.com/subscribe/post-json?u=3fb474bb32938e63a769bb905&id=e02877e9b6&c=?";
 
@@ -132,7 +140,6 @@
             script.src = `${url}&${data}`;
             document.body.appendChild(script);
 
-            // redirect after successful subscription
             setTimeout(() => {
                 window.location.href = "thank-you.html"; 
             }, 700);
