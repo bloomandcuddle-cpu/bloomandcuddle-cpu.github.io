@@ -36,7 +36,6 @@
             text-align: center;
         }
 
-        /* تعديل بسيط للتوازن على الموبايل فقط */
         @media (max-width: 480px) {
             .headline {
                 font-size: 32px;
@@ -83,7 +82,6 @@
             background: var(--lilac-dark);
         }
 
-        /* الجملة المطلوبة تحت الزر */
         .reassurance {
             font-size: 14px;
             color: rgba(0,0,0,0.55);
@@ -102,24 +100,20 @@
 <body>
     <div class="landing-container">
 
-        <!-- HEADLINE -->
         <h1 class="headline">You're Almost There — Get Your Free Newborn Resource</h1>
 
-        <!-- DESCRIPTION -->
         <p class="description">
             Tell us where to send your download.<br>
             Whether you came for the Newborn Checklist or the Gas & Reflux Cheat Sheet, 
             you’ll get access to both right after submitting your email.
         </p>
 
-        <!-- FORM -->
         <form id="subscribe-form">
             <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="Enter your email address">
 
             <input type="submit" value="👉 Send Me My Free Resource" id="mc-embedded-subscribe">
         </form>
 
-        <!-- REASSURANCE (المطلوبة) -->
         <p class="reassurance">Safe & private — no spam ever.</p>
 
         <div class="footer">© 2025 Bloom & Cuddle</div>
@@ -131,18 +125,22 @@
 
             const email = document.getElementById("mce-EMAIL").value;
 
+            // Mailchimp JSONP endpoint
             const url =
-              "https://gmail.us2.list-manage.com/subscribe/post-json?u=3fb474bb32938e63a769bb905&id=e02877e9b6&c=?";
+              "https://gmail.us2.list-manage.com/subscribe/post-json?u=3fb474bb32938e63a769bb905&id=e02877e9b6&c=callback";
 
-            const data = `EMAIL=${encodeURIComponent(email)}`;
+            // JSONP callback
+            window.callback = function(response) {
+                if (response.result === "success") {
+                    window.location.href = "thankpage.html";
+                } else {
+                    alert("Please enter a valid email.");
+                }
+            };
 
             const script = document.createElement("script");
-            script.src = `${url}&${data}`;
+            script.src = `${url}&EMAIL=${encodeURIComponent(email)}`;
             document.body.appendChild(script);
-
-            setTimeout(() => {
-                window.location.href = "thank-you.html"; 
-            }, 700);
         });
     </script>
 
