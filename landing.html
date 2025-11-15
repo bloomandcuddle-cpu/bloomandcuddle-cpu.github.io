@@ -6,7 +6,6 @@
     <title>Get Your Free Newborn Resource - Bloom & Cuddle</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== CSS VARIABLES ===== */
         :root {
             --warm-white: #FAF9F7;
             --white: #FFFFFF;
@@ -18,7 +17,6 @@
             --text-gray: #666666;
         }
 
-        /* ===== RESET & BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +35,6 @@
             padding: 40px 20px;
         }
 
-        /* ===== MAIN CONTAINER ===== */
         .landing-container {
             background-color: var(--white);
             border: 1px solid rgba(184, 163, 211, 0.1);
@@ -49,7 +46,6 @@
             text-align: center;
         }
 
-        /* ===== HEADLINE ===== */
         .headline {
             font-family: 'Playfair Display', serif;
             font-size: 38px;
@@ -59,7 +55,6 @@
             line-height: 1.2;
         }
 
-        /* ===== DESCRIPTION ===== */
         .description {
             font-size: 18px;
             color: rgba(58, 58, 60, 0.8);
@@ -70,7 +65,6 @@
             margin-right: auto;
         }
 
-        /* ===== MAILCHIMP FORM STYLING ===== */
         #mc_embed_signup {
             background: var(--white) !important;
             clear: left;
@@ -78,7 +72,11 @@
             width: 100% !important;
         }
 
-        /* Hide Mailchimp labels and titles */
+        /* hide only badge, NOT button container */
+        #mc_embed_signup .refferal_badge {
+            display: none !important;
+        }
+
         #mc_embed_signup h2,
         #mc_embed_signup .indicates-required,
         #mc_embed_signup .asterisk,
@@ -86,7 +84,6 @@
             display: none !important;
         }
 
-        /* Email input field */
         #mc_embed_signup .mc-field-group {
             width: 100% !important;
             margin-bottom: 16px !important;
@@ -113,7 +110,7 @@
             color: rgba(102, 102, 102, 0.5) !important;
         }
 
-        /* Submit button - إصلاح ظهور الزر */
+        /* Submit button -- FIXED & visible */
         #mc-embedded-subscribe {
             width: 100% !important;
             background-color: var(--lilac) !important;
@@ -126,7 +123,7 @@
             font-weight: 600 !important;
             cursor: pointer !important;
             transition: all 0.3s ease !important;
-            margin-top: 6px !important;
+            margin-top: 8px !important;
             display: block !important;
             visibility: visible !important;
             opacity: 1 !important;
@@ -137,7 +134,6 @@
             transform: translateY(-1px) !important;
         }
 
-        /* Reassurance text */
         .reassurance {
             font-size: 13px;
             color: rgba(58, 58, 60, 0.6);
@@ -145,13 +141,6 @@
             font-style: italic;
         }
 
-        /* Hide Mailchimp badge and other elements */
-        #mc_embed_signup .optionalParent,
-        #mc_embed_signup .refferal_badge {
-            display: none !important;
-        }
-
-        /* Footer */
         .footer {
             margin-top: 20px;
             padding-top: 20px;
@@ -159,22 +148,21 @@
             color: var(--text-gray);
         }
 
-        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
             body {
                 padding: 20px 16px;
                 align-items: flex-start;
             }
-            
+
             .landing-container {
                 padding: 32px 24px;
                 max-width: 100%;
             }
-            
+
             .headline {
                 font-size: 28px;
             }
-            
+
             .description {
                 font-size: 16px;
                 max-width: 100%;
@@ -185,69 +173,70 @@
             .landing-container {
                 padding: 24px 20px;
             }
-            
+
             .headline {
                 font-size: 26px;
             }
-            
+
             .description {
                 font-size: 15px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="landing-container">
-        <!-- Headline -->
         <h1 class="headline">You're Almost There — Get Your Free Newborn Resource</h1>
-        
-        <!-- Description -->
+
         <p class="description">
             Tell us where to send your download.<br>
             Whether you came for the Newborn Checklist or the Gas & Reflux Cheat Sheet, 
             you'll get access to both right after submitting your email.
         </p>
-        
-        <!-- Mailchimp Form -->
+
         <div id="mc_embed_shell">
             <div id="mc_embed_signup">
-                <form action="https://gmail.us2.list-manage.com/subscribe/post?u=3fb474bb32938e63a769bb905&amp;id=e02877e9b6&amp;f_id=008ce8e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <form action="https://gmail.us2.list-manage.com/subscribe/post?u=3fb474bb32938e63a769bb905&amp;id=e02877e9b6&amp;f_id=008ce8e0f0" 
+                      method="post" id="mc-embedded-subscribe-form" target="_blank">
+                    
                     <div id="mc_embed_signup_scroll">
+
                         <div class="mc-field-group">
-                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" placeholder="Enter your email address" value="">
+                            <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="Enter your email address">
                         </div>
+
                         <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                            <div class="response" id="mce-error-response"></div>
+                            <div class="response" id="mce-success-response"></div>
                         </div>
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+
+                        <div aria-hidden="true" style="position:absolute; left:-5000px;">
                             <input type="text" name="b_3fb474bb32938e63a769bb905_e02877e9b6" tabindex="-1" value="">
                         </div>
+
+                        <!-- BUTTON NOW VISIBLE -->
                         <div class="optionalParent">
                             <div class="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="👉 Send Me My Free Resource">
+                                <input type="submit" id="mc-embedded-subscribe" value="👉 Send Me My Free Resource">
                             </div>
                         </div>
+
                     </div>
                 </form>
             </div>
         </div>
-        
-        <!-- Reassurance Text -->
+
         <p class="reassurance">Safe, no spam, instant download</p>
-        
-        <!-- Footer -->
-        <div class="footer">
-            © 2025 Bloom & Cuddle — Built by moms, informed by experts.
-        </div>
+
+        <div class="footer">© 2025 Bloom & Cuddle — Built by moms, informed by experts.</div>
     </div>
 
     <script>
-        // Redirect to thank you page after form submission
-        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function() {
-            setTimeout(function() {
+        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function () {
+            setTimeout(() => {
                 window.location.href = 'thank-you.html';
-            }, 100);
+            }, 200);
         });
     </script>
 </body>
