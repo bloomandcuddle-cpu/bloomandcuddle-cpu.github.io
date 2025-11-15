@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Your Free Newborn Resource - Bloom & Cuddle</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --warm-white: #FAF9F7;
@@ -18,8 +19,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--warm-white);
-            color: var(--charcoal);
+            background: var(--warm-white);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -46,6 +46,7 @@
         .description {
             font-size: 18px;
             opacity: .8;
+            line-height: 1.6;
             margin-bottom: 32px;
         }
 
@@ -68,7 +69,6 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            margin-top: 10px;
         }
 
         #mc-embedded-subscribe:hover {
@@ -76,15 +76,16 @@
         }
 
         .reassurance {
-            font-size: 13px;
-            opacity: .7;
+            font-size: 14px;
+            color: rgba(0,0,0,0.55);
             margin-top: 12px;
+            font-style: italic;
         }
 
         .footer {
             margin-top: 20px;
-            font-size: 12px;
             opacity: .7;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -92,24 +93,27 @@
 <body>
     <div class="landing-container">
 
+        <!-- HEADLINE -->
         <h1 class="headline">You're Almost There — Get Your Free Newborn Resource</h1>
 
+        <!-- DESCRIPTION -->
         <p class="description">
-            Tell us where to send your download. You’ll get access instantly after submitting.
+            Tell us where to send your download.<br>
+            Whether you came for the Newborn Checklist or the Gas & Reflux Cheat Sheet, 
+            you’ll get access to both right after submitting your email.
         </p>
 
+        <!-- FORM -->
         <form id="subscribe-form">
+            <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="Enter your email address">
 
-            <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="Enter your email">
-
-            <input type="submit" value="👉 Send Me My Free Resources" id="mc-embedded-subscribe">
-
+            <input type="submit" value="👉 Send Me My Free Resource" id="mc-embedded-subscribe">
         </form>
 
-        <p class="reassurance">Safe & private — no spam ever.</p>
+        <!-- REASSURANCE -->
+        <p class="reassurance">You’ll get instant access right after you submit.</p>
 
         <div class="footer">© 2025 Bloom & Cuddle</div>
-
     </div>
 
     <script>
@@ -118,20 +122,20 @@
 
             const email = document.getElementById("mce-EMAIL").value;
 
-            // AJAX URL (IMPORTANT)
-            const url = "https://gmail.us2.list-manage.com/subscribe/post-json?u=3fb474bb32938e63a769bb905&id=e02877e9b6&c=?";
+            // Mailchimp JSONP endpoint
+            const url =
+              "https://gmail.us2.list-manage.com/subscribe/post-json?u=3fb474bb32938e63a769bb905&id=e02877e9b6&c=?";
 
             const data = `EMAIL=${encodeURIComponent(email)}`;
 
-            // JSONP request
             const script = document.createElement("script");
             script.src = `${url}&${data}`;
             document.body.appendChild(script);
 
-            // Redirect to thank you page
+            // redirect after successful subscription
             setTimeout(() => {
-                window.location.href = "thank-you.html";
-            }, 800);
+                window.location.href = "thank-you.html"; 
+            }, 700);
         });
     </script>
 
