@@ -7,7 +7,6 @@
     
     <style>
         /* ===== الخطوط والألوان الأساسية ===== */
-        /* لا تعدلي هذا القسم إلا إذا أردتي تغيير الألوان أو الخطوط */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap');
 
         :root {
@@ -22,7 +21,7 @@
             --soft-purple: #F0E8F8;
         }
 
-        /* ===== إعدادات عامة ===== */
+        /* ===== الإعدادات العامة ===== */
         * {
             margin: 0;
             padding: 0;
@@ -43,7 +42,6 @@
         }
 
         /* ===== العناوين والنصوص ===== */
-        /* لتغيير حجم الخط أو اللون - عدلي هنا */
         h1, h2, h3, h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
@@ -60,7 +58,6 @@
         }
 
         /* ===== الأزرار ===== */
-        /* لتغيير شكل الأزرار - عدلي هنا */
         .btn {
             display: inline-block;
             padding: 18px 32px;
@@ -91,8 +88,7 @@
             font-size: 14px;
         }
 
-        /* ===== الشريط العلوي (Navigation) ===== */
-        /* لتغيير الشريط العلوي - هذا قسمه */
+        /* ===== الشريط العلوي ===== */
         .navbar {
             background-color: var(--warm-white);
             padding: 15px 0;
@@ -116,12 +112,10 @@
             color: var(--primary-purple);
         }
 
-        /* قائمة الكمبيوتر - تظهر على الشاشات الكبيرة */
         .nav-links {
             display: none;
         }
 
-        /* زر القائمة للجوال */
         .mobile-menu-btn {
             display: block;
             background: none;
@@ -131,7 +125,6 @@
             color: var(--dark-text);
         }
 
-        /* القائمة المنزلقة للجوال */
         .mobile-menu {
             position: fixed;
             top: 60px;
@@ -183,8 +176,7 @@
             display: none;
         }
 
-        /* ===== القسم الرئيسي (Hero Section) ===== */
-        /* هذا أهم قسم في الصفحة - لتغيير النص أو الصورة */
+        /* ===== القسم الرئيسي ===== */
         .hero {
             background-color: var(--warm-white);
             padding: 100px 0 80px;
@@ -209,7 +201,6 @@
             color: var(--text-gray);
         }
 
-        /* مكان الصورة الرئيسية - استبدلي النص بصورة */
         .hero-image {
             background: linear-gradient(135deg, var(--primary-purple) 0%, var(--mint-green) 100%);
             border-radius: 20px;
@@ -239,8 +230,15 @@
         }
 
         .trust-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 15px;
+            color: var(--dark-purple);
+        }
+
+        .trust-icon svg {
+            width: 100%;
+            height: 100%;
         }
 
         .trust-item h4 {
@@ -253,7 +251,7 @@
             font-size: 14px;
         }
 
-        /* ===== قسم المقالات المقترحة ===== */
+        /* ===== باقي الأقسام تبقى كما هي ===== */
         .helpful-reads {
             padding: 50px 0;
             background-color: var(--warm-white);
@@ -286,7 +284,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        /* أماكن صور المقالات - استبدلي النص بالصور */
         .read-image {
             background-color: var(--light-gray);
             height: 180px;
@@ -307,7 +304,6 @@
             margin-bottom: 10px;
         }
 
-        /* ===== قسم التوجيه ===== */
         .guided-nav {
             padding: 50px 0;
             background-color: var(--soft-purple);
@@ -334,7 +330,6 @@
             color: var(--dark-purple);
         }
 
-        /* ===== قسم الدعوة الرئيسي (Main CTA) ===== */
         .main-cta {
             background-color: var(--warm-white);
             padding: 80px 0;
@@ -373,13 +368,6 @@
             font-weight: 600;
         }
 
-        .cta-microcopy {
-            font-size: 14px;
-            color: var(--text-gray);
-            margin-top: 15px;
-        }
-
-        /* ===== قسم من نحن ===== */
         .about-us {
             padding: 60px 0;
             background-color: var(--soft-purple);
@@ -401,7 +389,6 @@
             color: var(--text-gray);
         }
 
-        /* ===== الفوتر (Footer) ===== */
         .footer {
             background-color: var(--dark-text);
             color: var(--white);
@@ -441,11 +428,10 @@
             color: var(--light-gray);
         }
 
-        /* ===== إعدادات الشاشات الكبيرة (كمبيوتر) ===== */
+        /* ===== إعدادات الشاشات الكبيرة ===== */
         @media (min-width: 768px) {
             h1 { font-size: 42px; }
             
-            /* إظهار قائمة الكمبيوتر وإخفاء زر الجوال */
             .nav-links {
                 display: flex;
                 gap: 30px;
@@ -512,15 +498,12 @@
     </style>
 </head>
 <body>
-    <!-- ===== الشريط العلوي (التنقل) ===== -->
-    <!-- لتغيير روابط القائمة - عدلي هنا -->
+    <!-- ===== الشريط العلوي ===== -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <!-- الشعار - لتغيير الاسم -->
                 <div class="logo">Bloom & Cuddle</div>
                 
-                <!-- قائمة الكمبيوتر -->
                 <div class="nav-links">
                     <a href="#home">Home</a>
                     <a href="#guides">Guides</a>
@@ -529,15 +512,12 @@
                     <a href="#about">About</a>
                 </div>
                 
-                <!-- زر القائمة للجوال -->
                 <button class="mobile-menu-btn">☰</button>
                 
-                <!-- زر الدعوة الرئيسي -->
-                <a href="#checklist" class="nav-cta">Get the Newborn Essentials Starter Guide</a>
+                <a href="#checklist" class="nav-cta">Get the Newborn Checklist Many Real Moms Use</a>
             </div>
         </div>
         
-        <!-- القائمة المنزلقة للجوال -->
         <div class="mobile-menu">
             <div class="mobile-menu-links">
                 <a href="#home">Home</a>
@@ -545,27 +525,23 @@
                 <a href="#products">Product Picks</a>
                 <a href="#resources">Resources</a>
                 <a href="#about">About</a>
-                <!-- نسخة من زر الدعوة للجوال -->
-                <a href="#checklist" class="btn btn-primary btn-small" style="margin-top: 10px;">Get the Newborn Essentials Starter Guide</a>
+                <a href="#checklist" class="btn btn-primary btn-small" style="margin-top: 10px;">Get the Newborn Checklist Many Real Moms Use</a>
             </div>
         </div>
     </nav>
 
-    <!-- ===== القسم الرئيسي (الهيدر) ===== -->
-    <!-- هذا أهم قسم - لتغيير النص الرئيسي أو إضافة الصورة -->
+    <!-- ===== القسم الرئيسي ===== -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <!-- العنوان الرئيسي - يمكن تغييره -->
-                    <h1>Trusted Newborn Support — From One Mom to Another</h1>
-                    <!-- النص التوضيحي - يمكن تغييره -->
+                    <!-- العنوان المعدل -->
+                    <h1>Trusted Newborn Support — Backed by real moms & pediatric guidance</h1>
                     <p>Simple, evidence-informed tips and real-mom product picks to help you feel more confident, less overwhelmed, and a lot more supported in your newborn journey.</p>
-                    <!-- زر الدعوة - يمكن تغيير النص والرابط -->
-                    <a href="#checklist" class="btn btn-primary btn-small">Download the Free Newborn Essentials Checklist</a>
+                    <!-- زر الدعوة المعدل -->
+                    <a href="#checklist" class="btn btn-primary btn-small">Get the Newborn Checklist Many Real Moms Use</a>
                 </div>
                 <div class="hero-image">
-                    <!-- مكان الصورة الرئيسية - استبدلي هذا النص بـ <img src="path/to/your/image.jpg"> -->
                     <span>Mom + Baby Photo</span>
                 </div>
             </div>
@@ -573,25 +549,40 @@
     </section>
 
     <!-- ===== قسم مؤشرات الثقة ===== -->
-    <!-- لتغيير النقاط الثلاثة أو الإيقونات -->
     <section class="trust-indicators">
         <div class="container">
             <div class="trust-items">
-                <!-- النقطة الأولى -->
+                <!-- النقطة الأولى مع أيقونة متجهية -->
                 <div class="trust-item">
-                    <div class="trust-icon">📚</div>
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
                     <h4>Evidence-Informed Guidance</h4>
                     <p>Guidance grounded in reputable pediatric sources</p>
                 </div>
-                <!-- النقطة الثانية -->
+                <!-- النقطة الثانية مع أيقونة متجهية -->
                 <div class="trust-item">
-                    <div class="trust-icon">👩‍👧</div>
-                    <h4>Real-Mom Support</h4>
-                    <p>Advice and product insights tested by real moms</p>
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h4>Real-Mom Insights</h4>
+                    <p>Advice and product insights from real moms</p>
                 </div>
-                <!-- النقطة الثالثة -->
+                <!-- النقطة الثالثة مع أيقونة متجهية -->
                 <div class="trust-item">
-                    <div class="trust-icon">💫</div>
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
                     <h4>Honest Recommendations</h4>
                     <p>No sponsorships, no paid promotions</p>
                 </div>
@@ -599,26 +590,20 @@
         </div>
     </section>
 
-    <!-- ===== قسم المقالات المقترحة ===== -->
-    <!-- لتغيير المقالات والعناوين والصور -->
+    <!-- ===== باقي الأقسام تبقى كما هي ===== -->
     <section class="helpful-reads" id="guides">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
                 <div class="reads-title">More helpful reads for your newborn journey</div>
             </div>
             <div class="reads-grid">
-                <!-- المقال الأول -->
                 <div class="read-item">
-                    <!-- صورة المقال - استبدلي النص بصورة -->
                     <div class="read-image">Article Image 1</div>
                     <div class="read-content">
-                        <!-- عنوان المقال - غيريه -->
                         <h3>Article Title 1</h3>
-                        <!-- وصف المقال - غيريه -->
                         <p>Article description will be added later</p>
                     </div>
                 </div>
-                <!-- المقال الثاني -->
                 <div class="read-item">
                     <div class="read-image">Article Image 2</div>
                     <div class="read-content">
@@ -626,7 +611,6 @@
                         <p>Article description will be added later</p>
                     </div>
                 </div>
-                <!-- المقال الثالث -->
                 <div class="read-item">
                     <div class="read-image">Article Image 3</div>
                     <div class="read-content">
@@ -638,25 +622,20 @@
         </div>
     </section>
 
-    <!-- ===== قسم التوجيه ===== -->
-    <!-- لتغيير الأقسام الثلاثة -->
     <section class="guided-nav">
         <div class="container">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div class="reads-title">Helping you find what you need — faster.</div>
             </div>
             <div class="guide-cards">
-                <!-- القسم الأول -->
                 <div class="guide-card">
                     <div class="guide-icon">👶</div>
                     <h3>Newborn Basics</h3>
                 </div>
-                <!-- القسم الثاني -->
                 <div class="guide-card">
                     <div class="guide-icon">🍼</div>
                     <h3>Feeding & Sleep</h3>
                 </div>
-                <!-- القسم الثالث -->
                 <div class="guide-card">
                     <div class="guide-icon">🛍️</div>
                     <h3>Product Picks</h3>
@@ -665,51 +644,36 @@
         </div>
     </section>
 
-    <!-- ===== قسم الدعوة الرئيسي ===== -->
-    <!-- لتغيير نص الدعوة والإعلان -->
     <section class="main-cta" id="checklist">
         <div class="container">
             <div class="cta-content">
-                <!-- العنوان الرئيسي للدعوة -->
                 <h1>Stop the 3AM Crying — Get the Gas & Reflux Calming Cheat Sheet</h1>
-                <!-- النص التوضيحي -->
                 <p class="cta-subheadline">A simple, evidence-informed guide that shows you what actually works to soothe gas and reflux — step by step.</p>
-                <!-- نص الدعم -->
                 <p class="cta-support-line">Built with real mom experience and checked against trusted pediatric sources.</p>
-                <!-- خاتمة الدعوة -->
                 <p class="cta-closing">Get the free cheat sheet and start bringing calmer nights closer.</p>
                 
-                <!-- زر التحميل -->
                 <a href="#download" class="btn btn-primary">Download the Free Cheat Sheet</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== قسم من نحن ===== -->
-    <!-- لتغيير النص التعريفي -->
     <section class="about-us" id="about">
         <div class="container">
             <div class="about-content">
                 <h2>About Us</h2>
-                <!-- الفقرة الأولى -->
                 <p>I'm a mom who went through the same late-night searches, endless opinions, and overwhelming product choices — so I created a space that gives you what I wish I had: simple guidance, expert-reviewed insights, and honest recommendations you can truly trust.</p>
-                <!-- الفقرة الثانية -->
                 <p>Here, we bring together real-mom experience and pediatric-informed knowledge to support you with calm, clarity, and confidence — one small step at a time.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== الفوتر (الجزء السفلي) ===== -->
-    <!-- لتغيير روابط الفوتر والنصوص -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- قسم العلامة التجارية -->
                 <div class="footer-brand">
                     <h3>Bloom & Cuddle</h3>
                     <p>Evidence-informed tips, real-mom experience, and honest product recommendations for newborns 0–6 months.</p>
                 </div>
-                <!-- قسم الروابط السريعة -->
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <a href="#home">Home</a>
@@ -720,25 +684,20 @@
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
-                <!-- قسم المعلومات القانونية -->
                 <div class="footer-legal">
                     <h4>Legal</h4>
                     <a href="#privacy">Privacy Policy</a>
                     <a href="#terms">Terms of Use</a>
                     <a href="#affiliate">Affiliate Disclosure</a>
-                    <!-- نص الإفصاح عن العمولة -->
                     <p style="color: var(--light-gray); font-size: 12px; margin-top: 10px;">We may earn commissions from Amazon at no extra cost to you. We only recommend products we genuinely trust.</p>
                 </div>
             </div>
-            <!-- حقوق النشر -->
             <div class="footer-bottom">
                 <p>© 2025 Bloom & Cuddle — Built by moms, informed by experts.</p>
             </div>
         </div>
     </footer>
 
-    <!-- ===== الجافاسكريبت ===== -->
-    <!-- هذا الكود يجعل القائمة تعمل على الجوال - لا تعدليه -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -748,7 +707,6 @@
                 mobileMenu.classList.toggle('active');
             });
             
-            // إغلاق القائمة عند النقر على رابط
             const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', function() {
