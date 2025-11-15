@@ -11,7 +11,6 @@
             --white: #FFFFFF;
             --lilac: #B8A3D3;
             --lilac-dark: #9D88C0;
-            --mint: #A8E6CF;
             --charcoal: #3A3A3C;
             --light-gray: #E7E7E7;
             --text-gray: #666666;
@@ -99,17 +98,10 @@
             Tell us where to send your download. You’ll get access instantly after submitting.
         </p>
 
-        <form action="https://gmail.us2.list-manage.com/subscribe/post?u=3fb474bb32938e63a769bb905&amp;id=e02877e9b6&amp;f_id=008ce8e0f0"
-              method="post" id="mc-embedded-subscribe-form" target="_blank">
+        <form id="subscribe-form">
 
             <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="Enter your email">
 
-            <!-- honeypot -->
-            <div style="position:absolute; left:-5000px;" aria-hidden="true">
-                <input type="text" name="b_3fb474bb32938e63a769bb905_e02877e9b6" tabindex="-1" value="">
-            </div>
-
-            <!-- BUTTON FIXED — always visible -->
             <input type="submit" value="👉 Send Me My Free Resources" id="mc-embedded-subscribe">
 
         </form>
@@ -121,11 +113,25 @@
     </div>
 
     <script>
-        document.getElementById('mc-embedded-subscribe-form')
-        .addEventListener('submit', function() {
+        document.getElementById("subscribe-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("mce-EMAIL").value;
+
+            // AJAX URL (IMPORTANT)
+            const url = "https://gmail.us2.list-manage.com/subscribe/post-json?u=3fb474bb32938e63a769bb905&id=e02877e9b6&c=?";
+
+            const data = `EMAIL=${encodeURIComponent(email)}`;
+
+            // JSONP request
+            const script = document.createElement("script");
+            script.src = `${url}&${data}`;
+            document.body.appendChild(script);
+
+            // Redirect to thank you page
             setTimeout(() => {
-                window.location.href = 'thank-you.html';
-            }, 200);
+                window.location.href = "thank-you.html";
+            }, 800);
         });
     </script>
 
